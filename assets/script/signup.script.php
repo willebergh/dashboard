@@ -30,24 +30,6 @@
     }
 
 
-      // Checks if email is taken or not
-      $sql_check_email = "SELECT * FROM users WHERE email = ?";
-      $stmt_check_email = mysqli_stmt_init($conn);
-      if (!mysqli_stmt_prepare($stmt_check_email, $sql_check_email)) {
-        header("Location: ../signup.php");
-        exit;
-      } else {
-        mysqli_stmt_bind_param($stmt_check_email, "s", $email);
-        mysqli_stmt_execute($stmt_check_email);
-        $result_check_email = mysqli_stmt_get_result($stmt_check_email);
-        $row_check_email = mysqli_fetch_assoc($result_check_email);
-        if ($email == $row_check_email['email']) {
-          $check_email = "taken";
-        } else {
-          $check_email = "ok";
-        }
-      }
-
       if ($password == $password_repeat) {
         if ($hashed_password = password_hash($password, PASSWORD_DEFAULT)) {
           $check_password = "ok";
@@ -58,7 +40,7 @@
         $check_password = "no_match";
       }
 
-      if ($check_username == "ok" && $check_email == "ok" && $check_password == "ok") {
+      if ($check_username == "ok" && $check_password == "ok") {
         $sql = "INSERT INTO users (username, email, password)
           VALUES (?, ?)
         ";
