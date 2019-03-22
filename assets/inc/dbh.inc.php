@@ -1,8 +1,8 @@
 <?php
   $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "supertorrents";
+  $username = "dashboard";
+  $password = "JQASHY44MaLnivBN";
+  $dbname = "dashboard";
 
   $conn = new mysqli($servername, $username, $password, $dbname);
 
