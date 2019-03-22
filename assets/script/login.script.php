@@ -1,4 +1,4 @@
-<?php
+  <?php
   include_once "../inc/dbh.inc.php";
 
   $username = mysqli_real_escape_string($conn, $_POST['username']);
