@@ -60,14 +60,14 @@
 
       if ($check_username == "ok" && $check_email == "ok" && $check_password == "ok") {
         $sql = "INSERT INTO users (username, email, password)
-          VALUES (?, ?, ?)
+          VALUES (?, ?)
         ";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
           header("Location: $signup_PageURL");
           exit;
         } else {
-          mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashed_password);
+          mysqli_stmt_bind_param($stmt, "ss", $username, $hashed_password);
           mysqli_stmt_execute($stmt);
 
           session_start();
