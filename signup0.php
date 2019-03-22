@@ -13,7 +13,7 @@
 
 <div class="formContainer">
   <h1>Sign up</h1>
-  <form class="form" action="../assets/script/signup.script.php" method="post">
+  <form class="form" action="./assets/script/signup.script.php" method="post">
     <div class="form_username">
       <label for="username">Username</label>
       <?php if ($username_error == "taken") {echo "<p>username already registered</p>";} ?>
