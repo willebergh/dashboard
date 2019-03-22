@@ -1,8 +1,8 @@
   <?php
   include_once "../inc/dbh.inc.php";
 
-  $username = mysqli_real_escape_string($conn, $_POST['username']);
-  $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $username = mysqli_real_escape_string($conn, $_POST['login_username']);
+  $password = mysqli_real_escape_string($conn, $_POST['login_password']);
 
   if (empty($username) || empty($password)) {
     header("Location: /dashboard/index.php?error=noInput");
@@ -37,7 +37,7 @@
 
         } else {
 
-          header("Location: /dashboard/index.php?error=1");
+          header("Location: /dashboard/index.php?error=2");
 
         }
       }
