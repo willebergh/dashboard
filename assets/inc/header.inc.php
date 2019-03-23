@@ -15,9 +15,10 @@
         <h1 class="logo_item">Dashboard</h1>
       </div>
       <div class="nav_button">
-        <a class="nav_button_item" href="javascript:void(0)" id="nav_button" onclick="openDropdown()"><?php echo $_SESSION['username']; ?></a>
-        <span class="nav_button_item fas fa-caret-down"></span>
-        <span class="nav_button_item fas fa-angle-down"></span>
+        <a class="nav_button_item" href="javascript:void(0)" id="nav_button" onclick="openDropdown()">
+          <?php echo $_SESSION['username']; ?>
+          <span class="nav_button_item fas fa-angle-down"></span>
+        </a>
       </div>
     </header>
     <div class="nav_dropdown" id="nav_dropdown">
