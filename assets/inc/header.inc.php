@@ -10,6 +10,6 @@
   <body>
     <header class="header">
       <div class="nav">
-        <a href="/dashboard/assets/script/logout.script.php">Logout</a>
+        <a class="nav_item" href="/dashboard/assets/script/logout.script.php">Logout</a>
       </div>
     </header>
