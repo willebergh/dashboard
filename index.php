@@ -15,5 +15,9 @@
   }
 
   if ($show_content == true) {
-    echo "works";
+    include_once "./assets/inc/header.inc.php";
+    echo "<main>";
+      include_once "./assets/inc/project_adder.inc.php";
+    echo "</main>";
+    include_once "./assets/inc/footer.inc.php";
   }
