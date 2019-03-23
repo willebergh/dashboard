@@ -1,6 +1,6 @@
 <div class="project_adder_form_container">
   <form class="project_adder_form" action="index.html" method="post">
-    <input class="project_adder_form_input" type="text" name="project_titel" placeholder="Title">
+    <input class="project_adder_form_input" type="text" name="project_titel" placeholder="Name">
     <input class="project_adder_form_input" type="text" name="project_features" placeholder="Features">
     <input class="project_adder_form_input" type="text" name="project_description" placeholder="Description">
     <div class="project_lang_container">
