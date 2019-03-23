@@ -1,6 +1,6 @@
 function openDropdown() {
   document.getElementById("nav_dropdown").style.display = "block";
-  document.getElementByID("nav_button").setAttribute( "onClick", "closeDropdown();" );
+  document.getElementById("nav_button").setAttribute( "onClick", "closeDropdown();" );
 }
 
 function closeDropdown() {
