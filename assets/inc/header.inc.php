@@ -23,6 +23,10 @@
     </header>
     <div class="nav_dropdown" id="nav_dropdown">
       <div class="nav_item">
+        <p>Current user:</p>
+        <p><?php echo $_SESSION['username'] ?></p>
+      </div>
+      <div class="nav_item">
         <a href="#">
           <span class="nav_item_icon fas fa-cog"></span>
           <span class="nav_item_text">Settings</span>
