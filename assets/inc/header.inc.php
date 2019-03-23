@@ -5,6 +5,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="/dashboard/assets/css/reset.css">
     <link rel="stylesheet" href="/dashboard/assets/css/main.css">
+    <link rel="stylesheet" href="/dashboard/assets/css/header.css">
   </head>
   <body>
     <header class="header">

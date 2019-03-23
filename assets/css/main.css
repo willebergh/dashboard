@@ -1,3 +1,23 @@
+:root {
+  /* GUIDE LINES */
+  /* COLOR SCHEME */
+  --main-gray-color: #3A3A3A;
+  --main-blue-color: #1794de;
+  --main-white-color: #FFFFFF;
+  /* FONTS */
+  --main-font: 'Open Sans', sans-serif;
+  --main-alt-font: 'Roboto Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--main-alt-font);
+}
+p, a {
+  font-family: var(--main-font);
+  text-decoration: none;
+  color: var(--main-gray-color);
+}
+
 .project_adder_form_container {
   display: block;
   width: 350px;
