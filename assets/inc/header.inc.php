@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/dashboard/assets/css/main.css">
   </head>
   <body>
-    <header>
-      
+    <header class="header">
+      <div class="nav">
+        <a href="/dashboard/assets/script/logout.script.php">Logout</a>
+      </div>
     </header>
