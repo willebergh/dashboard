@@ -1,0 +1,32 @@
+.project_adder_form_container {
+  display: block;
+  width: 350px;
+  padding: 16px 16px;
+  background-color: #eee;
+  box-shadow: 1px 1px 4px 1px #ccc;
+}
+.project_adder_form {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.project_adder_form_input {
+  display: block;
+  width: 90%;
+  margin: 16px auto;
+  padding: 4px;
+}
+.project_lang_container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  width: 90%;
+  margin: 16px auto;
+}
+.project_adder_form_button {
+  display: block;
+  width: auto;
+  margin: 16px auto;
+  padding: 4px;
+}
