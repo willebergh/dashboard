@@ -5,13 +5,13 @@
   $password = mysqli_real_escape_string($conn, $_POST['login_password']);
 
   if (empty($username) || empty($password)) {
-    header("Location: /dashboard/index.php?error=noInput");
+    header("Location: /dashboard/?error=noInput");
     exit;
   } else {
     $sql = "SELECT username, password FROM users WHERE username = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-      header("Location: /dashboard/index.php?error=sql_error");
+      header("Location: /dashboard/?error=sql_error");
     } else {
 
       mysqli_stmt_bind_param($stmt, "s", $username);
@@ -22,7 +22,7 @@
 
         $password_check = password_verify($password, $row['password']);
         if ($password_check == false) {
-          header("Location: /dashboard/index.php?error=1");
+          header("Location: /dashboard/?error=1");
           exit;
 
         } else if ($password_check == true) {
@@ -32,12 +32,12 @@
           $_SESSION['username'] = $username;
           $_SESSION['authenticated'] = true;
 
-          header("Location: /dashboard/index.php");
+          header("Location: /dashboard/");
           exit;
 
         } else {
 
-          header("Location: /dashboard/index.php?error=2");
+          header("Location: /dashboard/?error=2");
 
         }
       }
