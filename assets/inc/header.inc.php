@@ -6,10 +6,31 @@
     <link rel="stylesheet" href="/dashboard/assets/css/reset.css">
     <link rel="stylesheet" href="/dashboard/assets/css/main.css">
     <link rel="stylesheet" href="/dashboard/assets/css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="/dashboard/assets/js/main.js"></script>
   </head>
   <body>
     <header class="header">
-      <div class="nav">
-        <a class="nav_item" href="/dashboard/assets/script/logout.script.php">Logout</a>
+      <div class="logo">
+        <h1 class="logo_item">Dashboard</h1>
+      </div>
+      <div class="nav_button">
+        <a class="nav_button_item" href="javascript:void(0)" id="nav_button" onclick="openDropdown()"><?php echo $_SESSION['username']; ?></a>
+        <span class="nav_button_item fas fa-caret-down"></span>
+        <span class="nav_button_item fas fa-angle-down"></span>
       </div>
     </header>
+    <div class="nav_dropdown" id="nav_dropdown">
+      <div class="nav_item">
+        <a href="#">
+          <span class="nav_item_icon fas fa-cog"></span>
+          <span class="nav_item_text">Settings</span>
+        </a>
+      </div>
+      <div class="nav_item">
+        <a href="/dashboard/assets/script/logout.script.php">
+          <span class="nav_item_icon fas fa-sign-out-alt"></span>
+          <span class="nav_item_text">Logout</span>
+        </a>
+      </div>
+    </div>
